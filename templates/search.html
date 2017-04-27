@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block head %}
+{{ super() }}
+    <style type="text/css">
+    .name {
+        font-family: '微软雅黑';
+        color: chocolate;
+        margin-right: 100px;
+    }
+    </style>
+{% endblock %}
+
+{% block page_content %}
+<div class="page-header">
+    <h1>{% if search_name %}{{ search_name }}{% else %}无{% endif %}搜索结果</h1>
+</div>
+<div>
+    <ul>
+        {% for k, v in data.items() %}
+        <li>
+            <span class="name"><a href="/contents/{{ k }}"> {{ v }}</a></span>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+
+{% endblock %}
