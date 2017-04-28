@@ -14,3 +14,8 @@ selenium+PhantomJS+python下载小说
 	</ul>
 <br>
 未来会继续改进。
+----
+<a href="https://github.com/Blackyukun/dingdian/tree/second">第一次 Flask</a>
+<br>
+知乎传送门<a href="https://zhuanlan.zhihu.com/p/26558641#tipjar">地址</a>
+继续更新.
