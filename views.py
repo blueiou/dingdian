@@ -36,8 +36,7 @@ def search():
 
     data = book_number(search_name)
 
-    search_id = [k for k, v in data.items() if v == search_name]
-    session['search_id'] = search_id[0]
+    # search_id = [k for k, v in data.items() if v == search_name]
 
     return render_template('search.html',data=data,search_name=search_name)
 
@@ -46,22 +45,21 @@ def contents(id):
     search_name = session.get('search_name')
 
     titles = get_allzj_title(search_name)[id]
-
+	bookid = id
     # list = get_contents_url(search_name)
     data = contents_number(titles)
 
-    return render_template('contents.html',data=data,search_name=search_name)
+    return render_template('contents.html', data=data,\
+					bookid=bookid, search_name=search_name)
 
-@app.route('/post/<int:id>')
+@app.route('/post/<bookid>/<int:id>')
 @cache.cached(timeout=300, key_prefix='view_%s', unless=None)
-def post(id):
+def post(bookid, id):
     search_name = session.get('search_name')
-    search_id = session.get('search_id')
 
-    title = get_allzj_title(search_name)[search_id][id]
+    title = get_allzj_title(search_name)[bookid][id]
 
-    list = get_posts(search_name, search_id, id)
-    # data = contents_number(list)
+    list = get_posts(search_name, bookid, id)
     post = list[0]
 
     return render_template('post.html',title=title,post=post,search_name=search_name)

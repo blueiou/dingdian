@@ -8,13 +8,13 @@ def book_number(search_name):
     for item in info_list.find():
         if search_name in item:
             info = item[search_name]
-        bookname = [i[1] for i in info]
-        for i, e in enumerate(bookname):
-            data[i] = e
+    if info == []:
+        info = get_search_url(search_name)
+    bookname = [i[1] for i in info]
+    for i, e in enumerate(bookname):
+        data[i] = e
     # print(data)
     return data
-    # for k,v in data.items():
-    #     print(k)
 
 def contents_number(list):
     data = {}
