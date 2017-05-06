@@ -43,14 +43,16 @@ def search():
 @app.route('/contents/<int:id>')
 def contents(id):
     search_name = session.get('search_name')
-
+	
+	bookname = book_number(search_name)[id]
+    session['bookname'] = bookname
     titles = get_allzj_title(search_name)[id]
 	bookid = id
     # list = get_contents_url(search_name)
     data = contents_number(titles)
 
     return render_template('contents.html', data=data,\
-					bookid=bookid, search_name=search_name)
+					bookid=bookid, bookname=bookname)
 
 @app.route('/post/<bookid>/<int:id>')
 @cache.cached(timeout=300, key_prefix='view_%s', unless=None)
