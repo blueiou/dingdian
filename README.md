@@ -23,5 +23,6 @@
   |-config.py
   |-manage.py
 ```
-知乎传送门<a href="https://zhuanlan.zhihu.com/p/26743634#tipjar">地址</a>
+知乎传送门<a href="https://zhuanlan.zhihu.com/p/26743634#tipjar">地址</a><br>
+
 继续更新。
