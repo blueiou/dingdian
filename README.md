@@ -1,19 +1,19 @@
-# µÚ¶ş´ÎÊµÏÖ
+# ç¬¬äºŒæ¬¡å®ç°
 ---
-Ê¹ÓÃ°üºÍÄ£¿é×éÖ¯´úÂë¡£
+ä½¿ç”¨åŒ…å’Œæ¨¡å—ç»„ç»‡ä»£ç ã€‚
 ```
 |-flasky
   |-app/
     |-templates/
     |-static/
     |-main/
-      |-__init__.py # ´æ·ÅÀ¶±¾
-      |-error.py # ×Ô¶¨ÒåµÄ´íÎóÊÓÍ¼º¯Êı
-      |-forms.py # ´æ·Å±íµ¥Àà
-      |-views.py # ÊÓÍ¼º¯Êı
+      |-__init__.py # å­˜æ”¾è“æœ¬
+      |-error.py # è‡ªå®šä¹‰çš„é”™è¯¯è§†å›¾å‡½æ•°
+      |-forms.py # å­˜æ”¾è¡¨å•ç±»
+      |-views.py # è§†å›¾å‡½æ•°
     |-__init__.py
     |-email.py
-    |-models.py # ´æ·ÅÄ£ĞÍÀà
+    |-models.py # å­˜æ”¾æ¨¡å‹ç±»
   |-migrations/
   |-tests/
     |-__init__.py
@@ -23,6 +23,6 @@
   |-config.py
   |-manage.py
 ```
-Öªºõ´«ËÍÃÅ<a href="https://zhuanlan.zhihu.com/p/26743634#tipjar">µØÖ·</a><br>
+çŸ¥ä¹ä¼ é€é—¨<a href="https://zhuanlan.zhihu.com/p/26743634">åœ°å€</a><br>
 
-¼ÌĞø¸üĞÂ¡£
+ç»§ç»­æ›´æ–°ã€‚
